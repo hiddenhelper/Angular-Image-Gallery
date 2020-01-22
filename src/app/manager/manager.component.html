@@ -54,14 +54,18 @@
 				</tr>
 			</tbody>
 		</table>
+
 		<div>
 			<div>
-				Queue progress:
+
+				Queue:
 				<div class="progress" style="">
 					<div class="progress-bar"
 						[ngStyle]="{ 'width': uploader.progress + '%' }"></div>
 				</div>
+
 			</div>
+
 			<button type="button" class="btn btn-success btn-s"
 				(click)="uploader.uploadAll()"
 				[disabled]="!uploader.getNotUploadedItems().length">
@@ -79,7 +83,7 @@
 	</div>
 </div>
 
-<h3>Your Images</h3>
+<h3>Images</h3>
 <!-- <cl-image public-id="stokvel/bridge" class="thumbnail inline" angle="20"
 	format="jpg"> <cl-transformation height="150" width="150"
 	crop="fill" radius="20"></cl-transformation> </cl-image>
@@ -88,7 +92,7 @@
 
 <div>
 	<p *ngIf="!imageDataArray">
-		Add images by dragging and dropping upload region above
+		Add images
 	</p>
 	
 	<cl-image *ngFor="let data of imageDataArray"
